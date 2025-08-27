@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  baileys:
+    build: .
+    container_name: baileys-local
+    ports:
+      - "3000:3000"
+    environment:
+      AUTH_BASE_DIR: /data
+      PORT: 3000
+    volumes:
+      - baileys_data:/data
+volumes:
+  baileys_data:
